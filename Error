@@ -1,0 +1,74 @@
+root@GnosisGoerliEL ~/graphprotocol-testnet-docker # docker logs indexer-agent --tail 10 -f | graph-pino
+INF 21:33:54.400 Register indexer, indexer: 0x2B73904A75C7e1904BCFEC78be5b466e350CBE66, url: https://index.graphishto.xyz/
+ERR 21:33:54.440 Failed to register indexer, indexer: 0x2B73904A75C7e1904BCFEC78be5b466e350CBE66, url: https://index.graphishto.xyz/, err: Failed to register indexer
+INF 21:33:55.440 Register indexer, indexer: 0x2B73904A75C7e1904BCFEC78be5b466e350CBE66, url: https://index.graphishto.xyz/
+ERR 21:33:55.464 Failed to register indexer, indexer: 0x2B73904A75C7e1904BCFEC78be5b466e350CBE66, url: https://index.graphishto.xyz/, err: Failed to register indexer
+INF 21:33:57.464 Register indexer, indexer: 0x2B73904A75C7e1904BCFEC78be5b466e350CBE66, url: https://index.graphishto.xyz/
+ERR 21:33:57.495 Failed to register indexer, indexer: 0x2B73904A75C7e1904BCFEC78be5b466e350CBE66, url: https://index.graphishto.xyz/, err: Failed to register indexer
+INF 21:34:01.496 Register indexer, indexer: 0x2B73904A75C7e1904BCFEC78be5b466e350CBE66, url: https://index.graphishto.xyz/
+ERR 21:34:01.518 Failed to register indexer, indexer: 0x2B73904A75C7e1904BCFEC78be5b466e350CBE66, url: https://index.graphishto.xyz/, err: Failed to register indexer
+INF 21:34:09.519 Register indexer, indexer: 0x2B73904A75C7e1904BCFEC78be5b466e350CBE66, url: https://index.graphishto.xyz/
+ERR 21:34:09.551 Failed to register indexer, indexer: 0x2B73904A75C7e1904BCFEC78be5b466e350CBE66, url: https://index.graphishto.xyz/, err: Failed to register indexer
+INF 21:34:25.552 Register indexer, indexer: 0x2B73904A75C7e1904BCFEC78be5b466e350CBE66, url: https://index.graphishto.xyz/
+ERR 21:34:25.581 Failed to register indexer, indexer: 0x2B73904A75C7e1904BCFEC78be5b466e350CBE66, url: https://index.graphishto.xyz/, err: Failed to register indexer
+Error: insufficient funds for intrinsic transaction cost [ See: https://links.ethers.org/v5-errors-INSUFFICIENT_FUNDS ] (error={"reason":"processing response error","code":"SERVER_ERROR","body":"{\"jsonrpc\":\"2.0\",\"id\":102,\"error\":{\"code\":-32000,\"message\":\"INTERNAL_ERROR: insufficient funds\"}}\n","error":{"code":-32000},"requestBody":"{\"method\":\"eth_sendRawTransaction\",\"params\":[\"0x02f9015005808459682f008459682f2283025e95947cf8ad279e9f26b7dad2be452a74068536c8231f80b8e4cc02d54e0000000000000000000000002b73904a75c7e1904bcfec78be5b466e350cbe66000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000001d68747470733a2f2f696e6465782e6772617068697368746f2e78797a2f00000000000000000000000000000000000000000000000000000000000000000000097564397772337432790000000000000000000000000000000000000000000000c080a029cdfeb4a1594e39e5cb92b614f6e45183295a238c65d9b7be29259edfe0036aa021c52df22ba8d6385f94d5b6833d91739137972cb291970494fc02ec17b9fe43\"],\"id\":102,\"jsonrpc\":\"2.0\"}","requestMethod":"POST","url":"http://65.108.108.197:19545/"}, method="sendTransaction", transaction="0x02f9015005808459682f008459682f2283025e95947cf8ad279e9f26b7dad2be452a74068536c8231f80b8e4cc02d54e0000000000000000000000002b73904a75c7e1904bcfec78be5b466e350cbe66000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000001d68747470733a2f2f696e6465782e6772617068697368746f2e78797a2f00000000000000000000000000000000000000000000000000000000000000000000097564397772337432790000000000000000000000000000000000000000000000c080a029cdfeb4a1594e39e5cb92b614f6e45183295a238c65d9b7be29259edfe0036aa021c52df22ba8d6385f94d5b6833d91739137972cb291970494fc02ec17b9fe43", code=INSUFFICIENT_FUNDS, version=providers/5.6.2)
+    at Logger.makeError (/opt/indexer/node_modules/@ethersproject/logger/lib/index.js:233:21)
+    at Logger.throwError (/opt/indexer/node_modules/@ethersproject/logger/lib/index.js:242:20)
+    at checkError (/opt/indexer/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:123:16)
+    at StaticJsonRpcProvider.<anonymous> (/opt/indexer/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:687:47)
+    at step (/opt/indexer/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/opt/indexer/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/opt/indexer/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  reason: 'insufficient funds for intrinsic transaction cost',
+  code: 'INSUFFICIENT_FUNDS',
+  error: Error: processing response error (body="{\"jsonrpc\":\"2.0\",\"id\":102,\"error\":{\"code\":-32000,\"message\":\"INTERNAL_ERROR: insufficient funds\"}}\n", error={"code":-32000}, requestBody="{\"method\":\"eth_sendRawTransaction\",\"params\":[\"0x02f9015005808459682f008459682f2283025e95947cf8ad279e9f26b7dad2be452a74068536c8231f80b8e4cc02d54e0000000000000000000000002b73904a75c7e1904bcfec78be5b466e350cbe66000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000001d68747470733a2f2f696e6465782e6772617068697368746f2e78797a2f00000000000000000000000000000000000000000000000000000000000000000000097564397772337432790000000000000000000000000000000000000000000000c080a029cdfeb4a1594e39e5cb92b614f6e45183295a238c65d9b7be29259edfe0036aa021c52df22ba8d6385f94d5b6833d91739137972cb291970494fc02ec17b9fe43\"],\"id\":102,\"jsonrpc\":\"2.0\"}", requestMethod="POST", url="http://65.108.108.197:19545/", code=SERVER_ERROR, version=web/5.6.0)
+      at Logger.makeError (/opt/indexer/node_modules/@ethersproject/logger/lib/index.js:233:21)
+      at Logger.throwError (/opt/indexer/node_modules/@ethersproject/logger/lib/index.js:242:20)
+      at /opt/indexer/node_modules/@ethersproject/web/lib/index.js:305:32
+      at step (/opt/indexer/node_modules/@ethersproject/web/lib/index.js:33:23)
+      at Object.next (/opt/indexer/node_modules/@ethersproject/web/lib/index.js:14:53)
+      at fulfilled (/opt/indexer/node_modules/@ethersproject/web/lib/index.js:5:58)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+    reason: 'processing response error',
+    code: 'SERVER_ERROR',
+    body: '{"jsonrpc":"2.0","id":102,"error":{"code":-32000,"message":"INTERNAL_ERROR: insufficient funds"}}\n',
+    error: Error: INTERNAL_ERROR: insufficient funds
+        at getResult (/opt/indexer/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:170:21)
+        at processJsonFunc (/opt/indexer/node_modules/@ethersproject/web/lib/index.js:348:22)
+        at /opt/indexer/node_modules/@ethersproject/web/lib/index.js:280:46
+        at step (/opt/indexer/node_modules/@ethersproject/web/lib/index.js:33:23)
+        at Object.next (/opt/indexer/node_modules/@ethersproject/web/lib/index.js:14:53)
+        at fulfilled (/opt/indexer/node_modules/@ethersproject/web/lib/index.js:5:58)
+        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+      code: -32000,
+      data: undefined
+    },
+    requestBody: '{"method":"eth_sendRawTransaction","params":["0x02f9015005808459682f008459682f2283025e95947cf8ad279e9f26b7dad2be452a74068536c8231f80b8e4cc02d54e0000000000000000000000002b73904a75c7e1904bcfec78be5b466e350cbe66000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000001d68747470733a2f2f696e6465782e6772617068697368746f2e78797a2f00000000000000000000000000000000000000000000000000000000000000000000097564397772337432790000000000000000000000000000000000000000000000c080a029cdfeb4a1594e39e5cb92b614f6e45183295a238c65d9b7be29259edfe0036aa021c52df22ba8d6385f94d5b6833d91739137972cb291970494fc02ec17b9fe43"],"id":102,"jsonrpc":"2.0"}',
+    requestMethod: 'POST',
+    url: 'http://65.108.108.197:19545/'
+  },
+  method: 'sendTransaction',
+  transaction: {
+    type: 2,
+    chainId: 5,
+    nonce: 0,
+    maxPriorityFeePerGas: BigNumber { _hex: '0x59682f00', _isBigNumber: true },
+    maxFeePerGas: BigNumber { _hex: '0x59682f22', _isBigNumber: true },
+    gasPrice: null,
+    gasLimit: BigNumber { _hex: '0x025e95', _isBigNumber: true },
+    to: '0x7CF8aD279E9F26b7DAD2Be452A74068536C8231F',
+    value: BigNumber { _hex: '0x00', _isBigNumber: true },
+    data: '0xcc02d54e0000000000000000000000002b73904a75c7e1904bcfec78be5b466e350cbe66000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000001d68747470733a2f2f696e6465782e6772617068697368746f2e78797a2f00000000000000000000000000000000000000000000000000000000000000000000097564397772337432790000000000000000000000000000000000000000000000',
+    accessList: [],
+    hash: '0xbbd4319d38e02d200340105eeda30fefe3f09ccdc3895201c0883953bc32c9c7',
+    v: 0,
+    r: '0x29cdfeb4a1594e39e5cb92b614f6e45183295a238c65d9b7be29259edfe0036a',
+    s: '0x21c52df22ba8d6385f94d5b6833d91739137972cb291970494fc02ec17b9fe43',
+    from: '0x7983D550e5a9eD2719f233c97104F472DF100455',
+    confirmations: 0
+  },
+  transactionHash: '0xbbd4319d38e02d200340105eeda30fefe3f09ccdc3895201c0883953bc32c9c7',
+  attemptNumber: 6,
+  retriesLeft: 0
+}
