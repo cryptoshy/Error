@@ -1,74 +1,397 @@
-root@GnosisGoerliEL ~/graphprotocol-testnet-docker # docker logs indexer-agent --tail 10 -f | graph-pino
-INF 21:33:54.400 Register indexer, indexer: 0x2B73904A75C7e1904BCFEC78be5b466e350CBE66, url: https://index.graphishto.xyz/
-ERR 21:33:54.440 Failed to register indexer, indexer: 0x2B73904A75C7e1904BCFEC78be5b466e350CBE66, url: https://index.graphishto.xyz/, err: Failed to register indexer
-INF 21:33:55.440 Register indexer, indexer: 0x2B73904A75C7e1904BCFEC78be5b466e350CBE66, url: https://index.graphishto.xyz/
-ERR 21:33:55.464 Failed to register indexer, indexer: 0x2B73904A75C7e1904BCFEC78be5b466e350CBE66, url: https://index.graphishto.xyz/, err: Failed to register indexer
-INF 21:33:57.464 Register indexer, indexer: 0x2B73904A75C7e1904BCFEC78be5b466e350CBE66, url: https://index.graphishto.xyz/
-ERR 21:33:57.495 Failed to register indexer, indexer: 0x2B73904A75C7e1904BCFEC78be5b466e350CBE66, url: https://index.graphishto.xyz/, err: Failed to register indexer
-INF 21:34:01.496 Register indexer, indexer: 0x2B73904A75C7e1904BCFEC78be5b466e350CBE66, url: https://index.graphishto.xyz/
-ERR 21:34:01.518 Failed to register indexer, indexer: 0x2B73904A75C7e1904BCFEC78be5b466e350CBE66, url: https://index.graphishto.xyz/, err: Failed to register indexer
-INF 21:34:09.519 Register indexer, indexer: 0x2B73904A75C7e1904BCFEC78be5b466e350CBE66, url: https://index.graphishto.xyz/
-ERR 21:34:09.551 Failed to register indexer, indexer: 0x2B73904A75C7e1904BCFEC78be5b466e350CBE66, url: https://index.graphishto.xyz/, err: Failed to register indexer
-INF 21:34:25.552 Register indexer, indexer: 0x2B73904A75C7e1904BCFEC78be5b466e350CBE66, url: https://index.graphishto.xyz/
-ERR 21:34:25.581 Failed to register indexer, indexer: 0x2B73904A75C7e1904BCFEC78be5b466e350CBE66, url: https://index.graphishto.xyz/, err: Failed to register indexer
-Error: insufficient funds for intrinsic transaction cost [ See: https://links.ethers.org/v5-errors-INSUFFICIENT_FUNDS ] (error={"reason":"processing response error","code":"SERVER_ERROR","body":"{\"jsonrpc\":\"2.0\",\"id\":102,\"error\":{\"code\":-32000,\"message\":\"INTERNAL_ERROR: insufficient funds\"}}\n","error":{"code":-32000},"requestBody":"{\"method\":\"eth_sendRawTransaction\",\"params\":[\"0x02f9015005808459682f008459682f2283025e95947cf8ad279e9f26b7dad2be452a74068536c8231f80b8e4cc02d54e0000000000000000000000002b73904a75c7e1904bcfec78be5b466e350cbe66000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000001d68747470733a2f2f696e6465782e6772617068697368746f2e78797a2f00000000000000000000000000000000000000000000000000000000000000000000097564397772337432790000000000000000000000000000000000000000000000c080a029cdfeb4a1594e39e5cb92b614f6e45183295a238c65d9b7be29259edfe0036aa021c52df22ba8d6385f94d5b6833d91739137972cb291970494fc02ec17b9fe43\"],\"id\":102,\"jsonrpc\":\"2.0\"}","requestMethod":"POST","url":"http://65.108.108.197:19545/"}, method="sendTransaction", transaction="0x02f9015005808459682f008459682f2283025e95947cf8ad279e9f26b7dad2be452a74068536c8231f80b8e4cc02d54e0000000000000000000000002b73904a75c7e1904bcfec78be5b466e350cbe66000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000001d68747470733a2f2f696e6465782e6772617068697368746f2e78797a2f00000000000000000000000000000000000000000000000000000000000000000000097564397772337432790000000000000000000000000000000000000000000000c080a029cdfeb4a1594e39e5cb92b614f6e45183295a238c65d9b7be29259edfe0036aa021c52df22ba8d6385f94d5b6833d91739137972cb291970494fc02ec17b9fe43", code=INSUFFICIENT_FUNDS, version=providers/5.6.2)
-    at Logger.makeError (/opt/indexer/node_modules/@ethersproject/logger/lib/index.js:233:21)
-    at Logger.throwError (/opt/indexer/node_modules/@ethersproject/logger/lib/index.js:242:20)
-    at checkError (/opt/indexer/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:123:16)
-    at StaticJsonRpcProvider.<anonymous> (/opt/indexer/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:687:47)
-    at step (/opt/indexer/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
-    at Object.throw (/opt/indexer/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
-    at rejected (/opt/indexer/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-  reason: 'insufficient funds for intrinsic transaction cost',
-  code: 'INSUFFICIENT_FUNDS',
-  error: Error: processing response error (body="{\"jsonrpc\":\"2.0\",\"id\":102,\"error\":{\"code\":-32000,\"message\":\"INTERNAL_ERROR: insufficient funds\"}}\n", error={"code":-32000}, requestBody="{\"method\":\"eth_sendRawTransaction\",\"params\":[\"0x02f9015005808459682f008459682f2283025e95947cf8ad279e9f26b7dad2be452a74068536c8231f80b8e4cc02d54e0000000000000000000000002b73904a75c7e1904bcfec78be5b466e350cbe66000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000001d68747470733a2f2f696e6465782e6772617068697368746f2e78797a2f00000000000000000000000000000000000000000000000000000000000000000000097564397772337432790000000000000000000000000000000000000000000000c080a029cdfeb4a1594e39e5cb92b614f6e45183295a238c65d9b7be29259edfe0036aa021c52df22ba8d6385f94d5b6833d91739137972cb291970494fc02ec17b9fe43\"],\"id\":102,\"jsonrpc\":\"2.0\"}", requestMethod="POST", url="http://65.108.108.197:19545/", code=SERVER_ERROR, version=web/5.6.0)
-      at Logger.makeError (/opt/indexer/node_modules/@ethersproject/logger/lib/index.js:233:21)
-      at Logger.throwError (/opt/indexer/node_modules/@ethersproject/logger/lib/index.js:242:20)
-      at /opt/indexer/node_modules/@ethersproject/web/lib/index.js:305:32
-      at step (/opt/indexer/node_modules/@ethersproject/web/lib/index.js:33:23)
-      at Object.next (/opt/indexer/node_modules/@ethersproject/web/lib/index.js:14:53)
-      at fulfilled (/opt/indexer/node_modules/@ethersproject/web/lib/index.js:5:58)
-      at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-    reason: 'processing response error',
-    code: 'SERVER_ERROR',
-    body: '{"jsonrpc":"2.0","id":102,"error":{"code":-32000,"message":"INTERNAL_ERROR: insufficient funds"}}\n',
-    error: Error: INTERNAL_ERROR: insufficient funds
-        at getResult (/opt/indexer/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:170:21)
-        at processJsonFunc (/opt/indexer/node_modules/@ethersproject/web/lib/index.js:348:22)
-        at /opt/indexer/node_modules/@ethersproject/web/lib/index.js:280:46
-        at step (/opt/indexer/node_modules/@ethersproject/web/lib/index.js:33:23)
-        at Object.next (/opt/indexer/node_modules/@ethersproject/web/lib/index.js:14:53)
-        at fulfilled (/opt/indexer/node_modules/@ethersproject/web/lib/index.js:5:58)
-        at processTicksAndRejections (node:internal/process/task_queues:96:5) {
-      code: -32000,
-      data: undefined
-    },
-    requestBody: '{"method":"eth_sendRawTransaction","params":["0x02f9015005808459682f008459682f2283025e95947cf8ad279e9f26b7dad2be452a74068536c8231f80b8e4cc02d54e0000000000000000000000002b73904a75c7e1904bcfec78be5b466e350cbe66000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000001d68747470733a2f2f696e6465782e6772617068697368746f2e78797a2f00000000000000000000000000000000000000000000000000000000000000000000097564397772337432790000000000000000000000000000000000000000000000c080a029cdfeb4a1594e39e5cb92b614f6e45183295a238c65d9b7be29259edfe0036aa021c52df22ba8d6385f94d5b6833d91739137972cb291970494fc02ec17b9fe43"],"id":102,"jsonrpc":"2.0"}',
-    requestMethod: 'POST',
-    url: 'http://65.108.108.197:19545/'
-  },
-  method: 'sendTransaction',
-  transaction: {
-    type: 2,
-    chainId: 5,
-    nonce: 0,
-    maxPriorityFeePerGas: BigNumber { _hex: '0x59682f00', _isBigNumber: true },
-    maxFeePerGas: BigNumber { _hex: '0x59682f22', _isBigNumber: true },
-    gasPrice: null,
-    gasLimit: BigNumber { _hex: '0x025e95', _isBigNumber: true },
-    to: '0x7CF8aD279E9F26b7DAD2Be452A74068536C8231F',
-    value: BigNumber { _hex: '0x00', _isBigNumber: true },
-    data: '0xcc02d54e0000000000000000000000002b73904a75c7e1904bcfec78be5b466e350cbe66000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000001d68747470733a2f2f696e6465782e6772617068697368746f2e78797a2f00000000000000000000000000000000000000000000000000000000000000000000097564397772337432790000000000000000000000000000000000000000000000',
-    accessList: [],
-    hash: '0xbbd4319d38e02d200340105eeda30fefe3f09ccdc3895201c0883953bc32c9c7',
-    v: 0,
-    r: '0x29cdfeb4a1594e39e5cb92b614f6e45183295a238c65d9b7be29259edfe0036a',
-    s: '0x21c52df22ba8d6385f94d5b6833d91739137972cb291970494fc02ec17b9fe43',
-    from: '0x7983D550e5a9eD2719f233c97104F472DF100455',
-    confirmations: 0
-  },
-  transactionHash: '0xbbd4319d38e02d200340105eeda30fefe3f09ccdc3895201c0883953bc32c9c7',
-  attemptNumber: 6,
-  retriesLeft: 0
-}
+  Updating git repository `https://github.com/That3Percent/graphql-parser.git`
+    Updating crates.io index
+  Downloaded adler v1.0.2
+  Downloaded num-traits v0.2.15
+  Downloaded object v0.29.0
+  Downloaded rand v0.7.3
+  Downloaded rayon-core v1.9.3
+  Downloaded rayon v1.5.3
+  Downloaded structopt v0.3.26
+  Downloaded clap v2.34.0
+  Downloaded getrandom v0.1.16
+  Downloaded ppv-lite86 v0.2.16
+  Downloaded quote v1.0.21
+  Downloaded unicode-ident v1.0.4
+  Downloaded thiserror-impl v1.0.37
+  Downloaded textwrap v0.11.0
+  Downloaded static_assertions v1.1.0
+  Downloaded regex v1.6.0
+  Downloaded proc-macro-error-attr v1.0.4
+  Downloaded proc-macro-error v1.0.4
+  Downloaded version_check v0.9.4
+  Downloaded syn v1.0.101
+  Downloaded unicode-xid v0.2.4
+  Downloaded tree-buf v0.10.0
+  Downloaded failure v0.1.8
+  Downloaded firestorm v0.3.1
+  Downloaded num-complex v0.2.4
+  Downloaded tree-buf-macros v0.10.0
+  Downloaded single v1.0.1
+  Downloaded stable_deref_trait v1.2.0
+  Downloaded dirs-sys v0.3.7
+  Downloaded zigzag v0.1.0
+  Downloaded thiserror v1.0.37
+  Downloaded serde_derive v1.0.145
+  Downloaded nodrop v0.1.14
+  Downloaded unicode-width v0.1.10
+  Downloaded unreachable v1.0.0
+  Downloaded rental-impl v0.5.5
+  Downloaded libc v0.2.134
+  Downloaded lexical-core v0.7.6
+  Downloaded void v1.0.2
+  Downloaded gimli v0.26.2
+  Downloaded structopt-derive v0.4.18
+  Downloaded num-format v0.4.0
+  Downloaded crossbeam-utils v0.8.12
+  Downloaded arrayvec v0.5.2
+  Downloaded dirs v4.0.0
+  Downloaded synstructure v0.12.6
+  Downloaded num-iter v0.1.43
+  Downloaded num-bigint v0.2.6
+  Downloaded Inflector v0.11.4
+  Downloaded vec_map v0.8.2
+  Downloaded serde v1.0.145
+  Downloaded shellexpand v2.1.2
+  Downloaded rental v0.5.6
+  Downloaded num-rational v0.2.4
+  Downloaded fraction v0.6.3
+  Downloaded num v0.2.1
+  Downloaded nom v5.1.2
+  Downloaded gibbon v0.1.3
+  Downloaded failure_derive v0.1.8
+  Downloaded error-chain v0.12.4
+  Downloaded arrayvec v0.4.12
+  Downloaded simple-16 v0.2.0
+  Downloaded ascii v0.9.3
+  Downloaded unicode-segmentation v1.10.0
+  Downloaded num_cpus v1.13.1
+  Downloaded num-integer v0.1.45
+  Downloaded miniz_oxide v0.5.4
+  Downloaded memoffset v0.6.5
+  Downloaded memchr v2.5.0
+  Downloaded lazy_static v1.4.0
+  Downloaded itoa v1.0.3
+  Downloaded itoa v0.4.8
+  Downloaded heck v0.3.3
+  Downloaded either v1.8.0
+  Downloaded crossbeam-epoch v0.9.11
+  Downloaded crossbeam-deque v0.8.2
+  Downloaded crossbeam-channel v0.5.6
+  Downloaded combine v3.8.1
+  Downloaded cfg-if v1.0.0
+  Downloaded cc v1.0.73
+  Downloaded byteorder v1.4.3
+  Downloaded bitflags v1.3.2
+  Downloaded backtrace v0.3.66
+  Downloaded autocfg v1.1.0
+  Downloaded atty v0.2.14
+  Downloaded anyhow v1.0.65
+  Downloaded ansi_term v0.12.1
+  Downloaded aho-corasick v0.7.19
+  Downloaded addr2line v0.17.0
+  Downloaded strsim v0.8.0
+  Downloaded serde_json v1.0.85
+  Downloaded scopeguard v1.1.0
+  Downloaded ryu v1.0.11
+  Downloaded rustc-demangle v0.1.21
+  Downloaded regex-syntax v0.6.27
+  Downloaded rand_core v0.5.1
+  Downloaded rand_chacha v0.2.2
+  Downloaded proc-macro2 v1.0.46
+  Downloaded coercible_errors v0.1.4
+  Downloaded transmute v0.1.1
+  Downloaded defer v0.1.0
+  Downloaded 101 crates (6.1 MB) in 1.25s
+   Compiling autocfg v1.1.0
+   Compiling proc-macro2 v1.0.46
+   Compiling unicode-ident v1.0.4
+   Compiling quote v1.0.21
+   Compiling libc v0.2.134
+   Compiling syn v1.0.101
+   Compiling memchr v2.5.0
+   Compiling cfg-if v1.0.0
+   Compiling version_check v0.9.4
+   Compiling cc v1.0.73
+   Compiling crossbeam-utils v0.8.12
+   Compiling gimli v0.26.2
+   Compiling adler v1.0.2
+   Compiling rustc-demangle v0.1.21
+   Compiling bitflags v1.3.2
+   Compiling rayon-core v1.9.3
+   Compiling serde_derive v1.0.145
+   Compiling failure_derive v0.1.8
+   Compiling unicode-xid v0.2.4
+   Compiling either v1.8.0
+   Compiling getrandom v0.1.16
+   Compiling scopeguard v1.1.0
+   Compiling ryu v1.0.11
+   Compiling thiserror v1.0.37
+   Compiling lexical-core v0.7.6
+   Compiling serde v1.0.145
+   Compiling regex-syntax v0.6.27
+   Compiling void v1.0.2
+   Compiling ascii v0.9.3
+   Compiling arrayvec v0.5.2
+   Compiling static_assertions v1.1.0
+   Compiling serde_json v1.0.85
+   Compiling unicode-segmentation v1.10.0
+   Compiling byteorder v1.4.3
+   Compiling arrayvec v0.4.12
+   Compiling lazy_static v1.4.0
+   Compiling unicode-width v0.1.10
+   Compiling ansi_term v0.12.1
+   Compiling ppv-lite86 v0.2.16
+   Compiling nodrop v0.1.14
+   Compiling vec_map v0.8.2
+   Compiling strsim v0.8.0
+   Compiling itoa v1.0.3
+   Compiling anyhow v1.0.65
+   Compiling stable_deref_trait v1.2.0
+   Compiling firestorm v0.3.1
+   Compiling transmute v0.1.1
+   Compiling itoa v0.4.8
+   Compiling gibbon v0.1.3
+   Compiling defer v0.1.0
+   Compiling unreachable v1.0.0
+   Compiling miniz_oxide v0.5.4
+   Compiling textwrap v0.11.0
+   Compiling simple-16 v0.2.0
+   Compiling proc-macro-error-attr v1.0.4
+   Compiling error-chain v0.12.4
+   Compiling proc-macro-error v1.0.4
+   Compiling nom v5.1.2
+   Compiling num-traits v0.2.15
+   Compiling num-integer v0.1.45
+   Compiling memoffset v0.6.5
+   Compiling num-bigint v0.2.6
+   Compiling crossbeam-epoch v0.9.11
+   Compiling num-rational v0.2.4
+   Compiling num-iter v0.1.43
+   Compiling num-complex v0.2.4
+   Compiling rayon v1.5.3
+   Compiling heck v0.3.3
+   Compiling object v0.29.0
+   Compiling combine v3.8.1
+   Compiling crossbeam-channel v0.5.6
+   Compiling aho-corasick v0.7.19
+   Compiling backtrace v0.3.66
+   Compiling num_cpus v1.13.1
+   Compiling atty v0.2.14
+   Compiling dirs-sys v0.3.7
+   Compiling crossbeam-deque v0.8.2
+   Compiling clap v2.34.0
+   Compiling dirs v4.0.0
+   Compiling rand_core v0.5.1
+   Compiling shellexpand v2.1.2
+   Compiling rand_chacha v0.2.2
+   Compiling rand v0.7.3
+   Compiling regex v1.6.0
+   Compiling addr2line v0.17.0
+   Compiling zigzag v0.1.0
+   Compiling Inflector v0.11.4
+   Compiling num-format v0.4.0
+   Compiling num v0.2.1
+   Compiling fraction v0.6.3
+   Compiling coercible_errors v0.1.4
+   Compiling synstructure v0.12.6
+   Compiling thiserror-impl v1.0.37
+   Compiling rental-impl v0.5.5
+   Compiling tree-buf-macros v0.10.0
+   Compiling structopt-derive v0.4.18
+   Compiling failure v0.1.8
+   Compiling single v1.0.1
+   Compiling tree-buf v0.10.0
+   Compiling structopt v0.3.26
+   Compiling graphql-parser v0.3.0 (https://github.com/That3Percent/graphql-parser.git?rev=d2225bd38d529e9d39d51bdf6dbf189bdf0923aa#d2225bd3)
+   Compiling rental v0.5.6
+   Compiling cost-model v0.1.0 (/code/node-plugin/lang)
+error: using `procedural-masquerade` crate
+  --> node-plugin/lang/src/lib.rs:27:1
+   |
+27 | / rental! {
+28 | |     mod rentals {
+29 | |         use super::*;
+30 | |         #[rental]
+...  |
+35 | |     }
+36 | | }
+   | |_^
+   |
+   = note: `#[deny(proc_macro_back_compat)]` on by default
+   = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+   = note: for more information, see issue #83125 <https://github.com/rust-lang/rust/issues/83125>
+   = note: The `procedural-masquerade` crate has been unnecessary since Rust 1.30.0. Versions of this crate below 0.1.7 will eventually stop compiling.
+   = note: this error originates in the macro `rental` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: use of deprecated trait `single::Single`: use [`Itertools::at_most_one`](https://docs.rs/itertools/latest/itertools/trait.Itertools.html#method.at_most_one) instead
+ --> node-plugin/lang/src/matching.rs:4:13
+  |
+4 | use single::Single as _;
+  |             ^^^^^^
+  |
+  = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated trait `single::Single`: use [`Itertools::at_most_one`](https://docs.rs/itertools/latest/itertools/trait.Itertools.html#method.at_most_one) instead
+  --> node-plugin/lang/src/parser.rs:20:13
+   |
+20 | use single::Single as _;
+   |             ^^^^^^
+
+warning: use of deprecated associated function `single::Single::single`: use [`Itertools::at_most_one`](https://docs.rs/itertools/latest/itertools/trait.Itertools.html#method.at_most_one) instead
+   --> node-plugin/lang/src/matching.rs:188:38
+    |
+188 |     match directive.arguments.iter().single() {
+    |                                      ^^^^^^
+
+warning: use of deprecated associated function `single::Single::single`: use [`Itertools::at_most_one`](https://docs.rs/itertools/latest/itertools/trait.Itertools.html#method.at_most_one) instead
+  --> node-plugin/lang/src/parser.rs:55:57
+   |
+55 |             match query.selection_set.items.into_iter().single() {
+   |                                                         ^^^^^^
+
+warning: use of deprecated associated function `single::Single::single`: use [`Itertools::at_most_one`](https://docs.rs/itertools/latest/itertools/trait.Itertools.html#method.at_most_one) instead
+   --> node-plugin/lang/src/parser.rs:267:29
+    |
+267 |     match queue.into_iter().single() {
+    |                             ^^^^^^
+
+error[E0320]: overflow while adding drop-check rules for CostModelData
+  --> node-plugin/lang/src/lib.rs:27:1
+   |
+27 | / rental! {
+28 | |     mod rentals {
+29 | |         use super::*;
+30 | |         #[rental]
+...  |
+35 | |     }
+36 | | }
+   | |_^
+   |
+   = note: overflowed on (&str, graphql_parser::query::Value<'static, &'static str>)
+   = note: this error originates in the derive macro `__rental_structs_and_impls` which comes from the expansion of the macro `rental` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0320]: overflow while adding drop-check rules for Result<CostModelData, RentalError<__E, std::string::String>>
+  --> node-plugin/lang/src/lib.rs:27:1
+   |
+27 | / rental! {
+28 | |     mod rentals {
+29 | |         use super::*;
+30 | |         #[rental]
+...  |
+35 | |     }
+36 | | }
+   | |_^
+   |
+   = note: overflowed on &str
+   = note: this error originates in the derive macro `__rental_structs_and_impls` which comes from the expansion of the macro `rental` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0320]: overflow while adding drop-check rules for Result<CostModelData, __E>
+  --> node-plugin/lang/src/lib.rs:27:1
+   |
+27 | / rental! {
+28 | |     mod rentals {
+29 | |         use super::*;
+30 | |         #[rental]
+...  |
+35 | |     }
+36 | | }
+   | |_^
+   |
+   = note: overflowed on &str
+   = note: this error originates in the derive macro `__rental_structs_and_impls` which comes from the expansion of the macro `rental` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0320]: overflow while adding drop-check rules for Result<CostModel, CompileError>
+   --> node-plugin/lang/src/lib.rs:123:63
+    |
+123 |     pub fn compile(text: impl Into<String>, globals: &str) -> Result<Self, CompileError> {
+    |                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: overflowed on &str
+
+error[E0320]: overflow while adding drop-check rules for CostModelData
+   --> node-plugin/lang/src/lib.rs:124:13
+    |
+124 |         let data = rentals::CostModelData::try_new(text.into(), |t| {
+    |             ^^^^
+    |
+    = note: overflowed on (&str, graphql_parser::query::Value<'static, &'static str>)
+
+error[E0320]: overflow while adding drop-check rules for ControlFlow<Result<Infallible, CompileError>, CostModelData>
+   --> node-plugin/lang/src/lib.rs:124:20
+    |
+124 |           let data = rentals::CostModelData::try_new(text.into(), |t| {
+    |  ____________________^
+125 | |             let mut doc = parser::parse_document(&t)
+126 | |                 .map_err(|e| CompileError::DocumentParseError(format!("{}", e)))?;
+127 | |             let globals = parse_vars(globals).map_err(CompileError::GlobalsParseError)?;
+...   |
+131 | |         })
+132 | |         .map_err(|e: rental::RentalError<CompileError, _>| e.0)?;
+    | |________________________________________________________________^
+    |
+    = note: overflowed on &str
+
+error[E0320]: overflow while adding drop-check rules for Result<CostModelData, CompileError>
+   --> node-plugin/lang/src/lib.rs:124:20
+    |
+124 |           let data = rentals::CostModelData::try_new(text.into(), |t| {
+    |  ____________________^
+125 | |             let mut doc = parser::parse_document(&t)
+126 | |                 .map_err(|e| CompileError::DocumentParseError(format!("{}", e)))?;
+127 | |             let globals = parse_vars(globals).map_err(CompileError::GlobalsParseError)?;
+...   |
+131 | |         })
+132 | |         .map_err(|e: rental::RentalError<CompileError, _>| e.0)?;
+    | |_______________________________________________________________^
+    |
+    = note: overflowed on &str
+
+error[E0320]: overflow while adding drop-check rules for Result<CostModelData, RentalError<CompileError, std::string::String>>
+   --> node-plugin/lang/src/lib.rs:124:20
+    |
+124 |           let data = rentals::CostModelData::try_new(text.into(), |t| {
+    |  ____________________^
+125 | |             let mut doc = parser::parse_document(&t)
+126 | |                 .map_err(|e| CompileError::DocumentParseError(format!("{}", e)))?;
+127 | |             let globals = parse_vars(globals).map_err(CompileError::GlobalsParseError)?;
+...   |
+130 | |             Ok(doc)
+131 | |         })
+    | |__________^
+    |
+    = note: overflowed on &str
+
+error[E0320]: overflow while adding drop-check rules for CostModelData
+   --> node-plugin/lang/src/lib.rs:124:20
+    |
+124 |           let data = rentals::CostModelData::try_new(text.into(), |t| {
+    |  ____________________^
+125 | |             let mut doc = parser::parse_document(&t)
+126 | |                 .map_err(|e| CompileError::DocumentParseError(format!("{}", e)))?;
+127 | |             let globals = parse_vars(globals).map_err(CompileError::GlobalsParseError)?;
+...   |
+131 | |         })
+132 | |         .map_err(|e: rental::RentalError<CompileError, _>| e.0)?;
+    | |________________________________________________________________^
+    |
+    = note: overflowed on (&str, graphql_parser::query::Value<'static, &'static str>)
+
+error[E0320]: overflow while adding drop-check rules for CostModel
+   --> node-plugin/lang/src/lib.rs:134:12
+    |
+134 |         Ok(CostModel { data })
+    |            ^^^^^^^^^^^^^^^^^^
+    |
+    = note: overflowed on (&str, graphql_parser::query::Value<'static, &'static str>)
+
+error[E0320]: overflow while adding drop-check rules for CostModelData
+   --> node-plugin/lang/src/lib.rs:134:24
+    |
+134 |         Ok(CostModel { data })
+    |                        ^^^^
+    |
+    = note: overflowed on (&str, graphql_parser::query::Value<'static, &'static str>)
+
+warning: `cost-model` (lib) generated 5 warnings
+error: could not compile `cost-model` due to 13 previous errors; 5 warnings emitted
+./runagora: line 10: /root/graphprotocol-testnet-docker/agora/target/release/agora: No such file or directory
